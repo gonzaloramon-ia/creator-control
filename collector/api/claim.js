@@ -4,6 +4,9 @@ const DEFAULT_ORIGINS = [
   'http://localhost:5500',
 ]
 
+const AIRTABLE_BASE_ID = 'app37ncBZYlnDF2o1'
+const AIRTABLE_CLAIMS_TABLE_ID = 'tblsAEQmJOeWbYP9g'
+
 const requests = new Map()
 
 function allowedOrigins() {
@@ -98,9 +101,7 @@ export default async function handler(req, res) {
   if (claim.error) return res.status(400).json({ error: claim.error })
 
   const token = process.env.AIRTABLE_TOKEN
-  const baseId = process.env.AIRTABLE_BASE_ID
-  const tableId = process.env.AIRTABLE_CLAIMS_TABLE_ID
-  if (!token || !baseId || !tableId) {
+  if (!token) {
     console.error('Collector is missing Airtable configuration.')
     return res.status(503).json({ error: 'Claim intake is not active yet.' })
   }
@@ -118,7 +119,7 @@ export default async function handler(req, res) {
   if (claim.goalNotes) fields['Goal notes'] = claim.goalNotes
 
   try {
-    const response = await fetch(`https://api.airtable.com/v0/${baseId}/${tableId}`, {
+    const response = await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_CLAIMS_TABLE_ID}`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${token}`,
