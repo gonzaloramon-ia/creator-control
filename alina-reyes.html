@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Alina Reyes — public creator page on Creator Control." />
+  <title>Alina Reyes · Creator Control</title>
+  <style>
+    :root{--bg:#f8f5ed;--surface:#fffdf8;--ink:#0c1a34;--muted:#596477;--line:#cfd5df;--blue:#1659d9;--green:#167857;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;background:var(--bg)}body.dark{--bg:#111820;--surface:#17212b;--ink:#f2f5f8;--muted:#b7c0cc;--line:#33404f;--blue:#68a2ff;--green:#5ed2a5}a,button{font:inherit;color:inherit}button{cursor:pointer}.shell{width:min(100% - 7vw,1080px);margin:0 auto}
+    .topbar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;gap:18px;align-items:center;min-height:70px;border-top:4px solid var(--ink);border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(10px)}
+    .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;letter-spacing:.04em;text-transform:uppercase}.mark{display:grid;place-items:center;width:34px;height:34px;border:3px solid currentColor;border-radius:50%;font-weight:900}.actions{display:flex;align-items:center;gap:10px}.theme{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:var(--surface);font-weight:900}.back{font-size:13px;font-weight:900;text-decoration:none;color:var(--blue)}
+    .profile{display:grid;grid-template-columns:minmax(280px,.85fr) minmax(320px,1.15fr);gap:clamp(26px,6vw,74px);padding:clamp(38px,7vw,82px) 0 46px}.portrait{position:relative;min-height:560px;overflow:hidden;border:1px solid var(--line);background:#d6c7ae}.portrait video{display:block;width:100%;height:100%;min-height:560px;object-fit:cover;object-position:center 42%}.verified{position:absolute;top:16px;left:16px;padding:8px 10px;border-radius:999px;background:var(--surface);color:var(--green);font-size:12px;font-weight:900}.eyebrow{margin:0 0 10px;color:var(--blue);font-size:13px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}.identity{padding-top:14px}.identity h1{margin:0;font-family:"Arial Narrow",Arial,sans-serif;font-size:clamp(44px,6vw,76px);line-height:.9;letter-spacing:-.04em;text-transform:uppercase}.handle{display:block;margin-top:16px;color:var(--green);font-size:18px;font-weight:800}.bio{margin:25px 0 0;color:var(--ink);font-family:Georgia,"Times New Roman",serif;font-size:21px;line-height:1.42}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tag{padding:8px 10px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px;font-weight:800}
+    .statement{margin-top:32px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.statement strong{font-size:14px;text-transform:uppercase;letter-spacing:.05em}.statement p{margin:8px 0 0;color:var(--muted);line-height:1.45}.section{border-top:1px solid var(--line);padding:42px 0}.head{display:flex;justify-content:space-between;gap:22px;align-items:end;margin-bottom:18px}.head h2{margin:0;font-size:clamp(28px,4vw,42px);letter-spacing:-.04em}.head p{max-width:390px;margin:0;color:var(--muted);line-height:1.45}.destinations{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.destination{display:flex;flex-direction:column;min-height:220px;padding:20px;border:1px solid var(--line);border-radius:14px;background:var(--surface)}.glyph{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:color-mix(in srgb,var(--blue) 10%,var(--surface));color:var(--blue);font-size:12px;font-weight:900}.destination h3{margin:28px 0 8px;font-size:20px}.destination p{margin:0;color:var(--muted);line-height:1.4}.destination button{display:inline-flex;align-items:center;justify-content:space-between;margin-top:auto;padding:13px 0 0;border:0;border-top:1px solid var(--line);color:var(--blue);background:transparent;font-weight:900;text-align:left}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:var(--line)}.metric{padding:20px;background:var(--surface)}.metric strong{display:block;font-size:32px}.metric span{display:block;margin-top:4px;color:var(--muted);font-size:13px}.notice{display:none;margin-top:18px;padding:14px 16px;border:1px solid color-mix(in srgb,var(--green) 45%,var(--line));border-radius:10px;background:color-mix(in srgb,var(--green) 10%,var(--surface));color:var(--green);font-weight:800}.footer{display:flex;justify-content:space-between;gap:18px;padding:28px 0 42px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}.footer a{color:var(--blue);font-weight:900;text-decoration:none}
+    @media(max-width:760px){.profile{grid-template-columns:1fr;padding-top:34px}.portrait,.portrait video{min-height:390px;height:390px}.destinations{grid-template-columns:1fr}.metrics{grid-template-columns:1fr}.head,.footer{display:grid;grid-template-columns:1fr}.identity{padding-top:0}}@media(max-width:480px){.shell{width:min(100% - 32px,440px)}.brand{font-size:14px}.mark{width:28px;height:28px;border-width:2px}.topbar{min-height:58px}.portrait,.portrait video{min-height:340px;height:340px}.bio{font-size:19px}}
+  </style>
+</head>
+<body>
+  <header class="topbar shell">
+    <a class="brand" href="./"><span class="mark">C</span><span>Creator Control</span></a>
+    <div class="actions"><a class="back" href="./">← Explore creators</a><button class="theme" type="button" aria-label="Toggle theme">☀</button></div>
+  </header>
+  <main class="shell">
+    <section class="profile">
+      <div class="portrait"><video autoplay muted loop playsinline preload="auto"><source src="https://creator-control.gonza11111.chatgpt.site/hero-creator-motion.mp4" type="video/mp4" /></video><span class="verified">✓ SFW public profile</span></div>
+      <div class="identity">
+        <p class="eyebrow">Independent creator</p>
+        <h1>Alina<br />Reyes</h1>
+        <span class="handle">@alinareyes · Buenos Aires</span>
+        <p class="bio">Lifestyle, behind the scenes and selected things I make. Choose the place that works for you.</p>
+        <div class="tags"><span class="tag">Lifestyle</span><span class="tag">Process</span><span class="tag">Behind the scenes</span><span class="tag">English · Español</span></div>
+        <div class="statement"><strong>This page belongs to Alina</strong><p>Creator Control is only the public front door. She chooses each destination and keeps control of her audience.</p></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="head"><div><p class="eyebrow">Choose a destination</p><h2>Find the right place.</h2></div><p>Each link is clear. Nothing is posted or sent on the creator’s behalf.</p></div>
+      <div class="destinations">
+        <article class="destination"><span class="glyph">FA</span><h3>Fansly</h3><p>Personal content and selected updates.</p><button data-destination="Fansly" type="button">Open Fansly <span>→</span></button></article>
+        <article class="destination"><span class="glyph">FV</span><h3>Fanvue</h3><p>More from Alina, on her chosen platform.</p><button data-destination="Fanvue" type="button">Open Fanvue <span>→</span></button></article>
+        <article class="destination"><span class="glyph">PT</span><h3>Public store</h3><p>Prints, products and future releases.</p><button data-destination="Public store" type="button">View store <span>→</span></button></article>
+      </div>
+      <p class="notice" id="notice" role="status"></p>
+    </section>
+    <section class="section">
+      <div class="head"><div><p class="eyebrow">Creator view</p><h2>Traffic, without pretending.</h2></div><p>This sample lets us test the public page and outbound-link event before connecting platform-native reporting.</p></div>
+      <div class="metrics"><div class="metric"><strong id="clickCount">0</strong><span>destination clicks in this browser</span></div><div class="metric"><strong>3</strong><span>destinations ready to test</span></div><div class="metric"><strong>0</strong><span>passwords requested</span></div></div>
+    </section>
+  </main>
+  <footer class="footer shell"><span>Creator Control · public page prototype</span><a href="claim.html">Claim a page →</a></footer>
+  <script>
+    const key='cc-alina-demo-clicks'; const count=document.querySelector('#clickCount'); const notice=document.querySelector('#notice');
+    function showCount(){count.textContent=localStorage.getItem(key)||'0'} showCount();
+    document.querySelectorAll('[data-destination]').forEach(button=>button.addEventListener('click',()=>{const value=Number(localStorage.getItem(key)||0)+1;localStorage.setItem(key,value);showCount();notice.textContent=`Demo event recorded: ${button.dataset.destination}. This will become a real outbound event once we activate the intake endpoint.`;notice.style.display='block';}));
+    const theme=document.querySelector('.theme');theme.addEventListener('click',()=>{document.body.classList.toggle('dark');theme.textContent=document.body.classList.contains('dark')?'☾':'☀'});
+  </script>
+</body>
+</html>
