@@ -13,11 +13,14 @@ Private, write-only intake endpoint for the public GitHub Pages claim form.
 
 Deploy this directory as a separate Vercel project. The public website remains on GitHub Pages.
 
-Set these **encrypted Vercel environment variables** before activating the public form:
+Set this **encrypted Vercel environment variable** before activating the public form:
 
 - `AIRTABLE_TOKEN`: Airtable personal access token scoped only to create records in this base
-- `AIRTABLE_BASE_ID`: `app37ncBZYlnDF2o1`
-- `AIRTABLE_CLAIMS_TABLE_ID`: `tblsAEQmJOeWbYP9g`
+
+Optional:
+
 - `ALLOWED_ORIGINS`: `https://gonzaloramon-ia.github.io`
 
 Use `GET /api/health` after deployment. It returns `configured: true` only when the collector can receive requests.
+
+The Airtable `Claims` table needs a text field called `Goal notes` if free-text notes are collected. It is optional in the request and can be omitted from the public form.
